@@ -68,7 +68,7 @@ store.on("error",()=>{
     console.log("ERROR in MONGO SESSION STORE",err);
 });
 const sesssionOptions={
-    secret:"mysupersecretstring",
+    secret:process.env.SECRET,
     resave:false,
     saveUninitialized:true,
     cookie:{
